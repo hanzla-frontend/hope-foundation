@@ -17,7 +17,7 @@ body {
 /* Hide horizontal scrollbar - Webkit (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
   width: 8px;
-  height: 0px; /* Hide horizontal scrollbar */
+  height: 0px;
 }
 
 ::-webkit-scrollbar-track {
@@ -34,31 +34,26 @@ body {
   background: #1e6b3f;
 }
 
-/* Hide horizontal scrollbar specifically */
 ::-webkit-scrollbar-horizontal {
   display: none !important;
   height: 0 !important;
   background: transparent !important;
 }
 
-/* Firefox scrollbar */
 * {
   scrollbar-width: thin;
   scrollbar-color: #2E8B57 #f1f1f1;
 }
 
-/* Firefox - hide horizontal scrollbar */
 html {
   overflow: -moz-scrollbars-none;
   scrollbar-width: none;
 }
 
-/* IE and Edge */
 body {
   -ms-overflow-style: none;
 }
 
-/* Ensure all elements don't cause horizontal scroll */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -88,65 +83,111 @@ object {
 
 @layer base {
   :root {
-    /* Light Theme Colors */
+    /* ===== Primary Colors ===== */
     --color-primary: #2E8B57;
     --color-primary-dark: #1e6b3f;
+    --color-primary-light: #3db86b;
     --color-secondary: #1976D2;
     --color-secondary-dark: #1559a0;
+    --color-secondary-light: #4d9eff;
     --color-accent: #FFC107;
     --color-accent-dark: #e6a800;
-    --color-light: #F5F7FA;
-    --color-dark: #1a1a2e;
-    --color-text: #1f2937;
-    --color-text-secondary: #4b5563;
-    --color-text-muted: #6b7280;
+    
+    /* ===== Background Colors - Light Theme ===== */
     --color-bg: #ffffff;
     --color-bg-secondary: #F5F7FA;
     --color-bg-tertiary: #e5e7eb;
+    --color-bg-card: #ffffff;
+    --color-bg-input: #ffffff;
+    --color-bg-nav: rgba(255, 255, 255, 0.95);
+    --color-bg-footer: #1a1a2e;
+    
+    /* ===== Text Colors - Light Theme (High Contrast) ===== */
+    --color-text: #1a1a2e;
+    --color-text-primary: #111827;
+    --color-text-secondary: #374151;
+    --color-text-muted: #6b7280;
+    --color-text-light: #9ca3af;
+    --color-text-white: #ffffff;
+    --color-text-black: #000000;
+    
+    /* ===== Border Colors ===== */
     --color-border: #e5e7eb;
     --color-border-dark: #d1d5db;
+    
+    /* ===== Shadow Colors ===== */
     --color-shadow: rgba(0, 0, 0, 0.1);
     --color-shadow-hover: rgba(0, 0, 0, 0.15);
     --color-shadow-lg: rgba(0, 0, 0, 0.2);
-    --color-card-bg: #ffffff;
-    --color-nav-bg: rgba(255, 255, 255, 0.95);
-    --color-footer-bg: #1a1a2e;
-    --color-input-bg: #ffffff;
+    
+    /* ===== Form Colors ===== */
     --color-input-border: #d1d5db;
     --color-input-focus: #2E8B57;
+    --color-input-placeholder: #9ca3af;
+    
+    /* ===== Status Colors ===== */
     --color-success: #10b981;
     --color-error: #ef4444;
     --color-warning: #f59e0b;
     --color-info: #3b82f6;
+    
+    /* ===== Light Theme Specific ===== */
+    --color-hero-overlay: rgba(0, 0, 0, 0.6);
+    --color-card-border: #e5e7eb;
   }
 
   .dark {
-    /* Dark Theme Colors */
+    /* ===== Primary Colors - Dark Theme ===== */
     --color-primary: #3db86b;
     --color-primary-dark: #2d8f52;
+    --color-primary-light: #4fc87a;
     --color-secondary: #4d9eff;
     --color-secondary-dark: #3d7fd4;
+    --color-secondary-light: #6db0ff;
     --color-accent: #FFC107;
     --color-accent-dark: #e6a800;
-    --color-light: #1f2937;
-    --color-dark: #0f0f1a;
-    --color-text: #f3f4f6;
-    --color-text-secondary: #9ca3af;
-    --color-text-muted: #6b7280;
+    
+    /* ===== Background Colors - Dark Theme ===== */
     --color-bg: #111827;
     --color-bg-secondary: #1f2937;
     --color-bg-tertiary: #374151;
+    --color-bg-card: #1f2937;
+    --color-bg-input: #1f2937;
+    --color-bg-nav: rgba(17, 24, 39, 0.95);
+    --color-bg-footer: #0f0f1a;
+    
+    /* ===== Text Colors - Dark Theme (High Contrast) ===== */
+    --color-text: #f3f4f6;
+    --color-text-primary: #f9fafb;
+    --color-text-secondary: #d1d5db;
+    --color-text-muted: #9ca3af;
+    --color-text-light: #6b7280;
+    --color-text-white: #ffffff;
+    --color-text-black: #000000;
+    
+    /* ===== Border Colors ===== */
     --color-border: #374151;
     --color-border-dark: #4b5563;
+    
+    /* ===== Shadow Colors ===== */
     --color-shadow: rgba(0, 0, 0, 0.3);
     --color-shadow-hover: rgba(0, 0, 0, 0.5);
     --color-shadow-lg: rgba(0, 0, 0, 0.6);
-    --color-card-bg: #1f2937;
-    --color-nav-bg: rgba(17, 24, 39, 0.95);
-    --color-footer-bg: #0f0f1a;
-    --color-input-bg: #1f2937;
+    
+    /* ===== Form Colors ===== */
     --color-input-border: #374151;
     --color-input-focus: #3db86b;
+    --color-input-placeholder: #6b7280;
+    
+    /* ===== Status Colors ===== */
+    --color-success: #34d399;
+    --color-error: #f87171;
+    --color-warning: #fbbf24;
+    --color-info: #60a5fa;
+    
+    /* ===== Dark Theme Specific ===== */
+    --color-hero-overlay: rgba(0, 0, 0, 0.7);
+    --color-card-border: #374151;
   }
 
   html {
@@ -173,7 +214,13 @@ object {
   h6 {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    color: var(--color-text);
+    color: var(--color-text-primary);
+    transition: color 0.3s ease;
+  }
+
+  p {
+    color: var(--color-text-secondary);
+    transition: color 0.3s ease;
   }
 
   a {
@@ -217,21 +264,15 @@ object {
     margin-right: auto;
     padding-left: 1rem;
     padding-right: 1rem;
-  }
-
-  /* Mobile First - Default */
-  .container {
     max-width: 100%;
   }
 
-  /* Small Mobile */
   @media (min-width: 480px) {
     .container {
       max-width: 480px;
     }
   }
 
-  /* Tablet */
   @media (min-width: 640px) {
     .container {
       max-width: 640px;
@@ -240,14 +281,12 @@ object {
     }
   }
 
-  /* Large Tablet / Small Laptop */
   @media (min-width: 768px) {
     .container {
       max-width: 768px;
     }
   }
 
-  /* Laptop */
   @media (min-width: 1024px) {
     .container {
       max-width: 1024px;
@@ -256,14 +295,12 @@ object {
     }
   }
 
-  /* Desktop */
   @media (min-width: 1280px) {
     .container {
       max-width: 1280px;
     }
   }
 
-  /* Large Desktop */
   @media (min-width: 1536px) {
     .container {
       max-width: 1536px;
@@ -276,6 +313,9 @@ object {
   }
   .bg-primary {
     background-color: var(--color-primary);
+  }
+  .bg-primary-dark {
+    background-color: var(--color-primary-dark);
   }
   .hover\:bg-primary-dark:hover {
     background-color: var(--color-primary-dark);
@@ -314,15 +354,45 @@ object {
     background-color: var(--color-dark);
   }
 
+  /* ===== Text Colors - High Contrast ===== */
+  .text-gray-50 {
+    color: var(--color-text-white);
+  }
+  .text-gray-100 {
+    color: var(--color-text-primary);
+  }
+  .text-gray-200 {
+    color: var(--color-text-secondary);
+  }
+  .text-gray-300 {
+    color: var(--color-text-muted);
+  }
+  .text-gray-400 {
+    color: var(--color-text-light);
+  }
+  .text-gray-500 {
+    color: var(--color-text-muted);
+  }
+  .text-gray-600 {
+    color: var(--color-text-secondary);
+  }
   .text-gray-700 {
     color: var(--color-text-secondary);
   }
   .text-gray-800 {
+    color: var(--color-text-primary);
+  }
+  .text-gray-900 {
     color: var(--color-text);
   }
-  .text-gray-600 {
-    color: var(--color-text-muted);
+  .text-white {
+    color: #ffffff;
   }
+  .text-black {
+    color: #000000;
+  }
+
+  /* ===== Background Colors ===== */
   .bg-white {
     background-color: var(--color-bg);
   }
@@ -335,6 +405,11 @@ object {
   .bg-gray-200 {
     background-color: var(--color-bg-tertiary);
   }
+  .bg-gray-900 {
+    background-color: var(--color-dark);
+  }
+
+  /* ===== Border Colors ===== */
   .border-gray-200 {
     border-color: var(--color-border);
   }
@@ -342,6 +417,10 @@ object {
     border-color: var(--color-border-dark);
   }
 
+  /* ===== Shadows ===== */
+  .shadow-sm {
+    box-shadow: 0 1px 2px 0 var(--color-shadow);
+  }
   .shadow-md {
     box-shadow: 0 4px 6px -1px var(--color-shadow);
   }
@@ -378,7 +457,7 @@ object {
   /* ===== Buttons ===== */
   .btn-primary {
     background-color: var(--color-primary);
-    color: white;
+    color: #ffffff;
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     border-radius: 9999px;
@@ -395,6 +474,7 @@ object {
     background-color: var(--color-primary-dark);
     box-shadow: 0 20px 25px -5px var(--color-shadow-hover);
     transform: translateY(-2px);
+    color: #ffffff;
   }
   .btn-primary:active {
     transform: translateY(0px);
@@ -402,7 +482,7 @@ object {
 
   .btn-secondary {
     background-color: var(--color-secondary);
-    color: white;
+    color: #ffffff;
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     border-radius: 9999px;
@@ -419,6 +499,7 @@ object {
     background-color: var(--color-secondary-dark);
     box-shadow: 0 20px 25px -5px var(--color-shadow-hover);
     transform: translateY(-2px);
+    color: #ffffff;
   }
   .btn-secondary:active {
     transform: translateY(0px);
@@ -440,7 +521,7 @@ object {
   }
   .btn-outline:hover {
     background-color: var(--color-primary);
-    color: white;
+    color: #ffffff;
     transform: translateY(-2px);
     box-shadow: 0 10px 15px -3px var(--color-shadow);
   }
@@ -467,12 +548,13 @@ object {
     background-color: var(--color-accent-dark);
     box-shadow: 0 20px 25px -5px var(--color-shadow-hover);
     transform: translateY(-2px);
+    color: #1f2937;
   }
   .btn-accent:active {
     transform: translateY(0px);
   }
 
-  /* Button sizes */
+  /* Button Sizes */
   .btn-sm {
     padding: 0.5rem 1rem;
     font-size: 0.75rem;
@@ -484,7 +566,7 @@ object {
 
   /* ===== Cards ===== */
   .card {
-    background-color: var(--color-card-bg);
+    background-color: var(--color-bg-card);
     border-radius: 0.75rem;
     box-shadow: 0 4px 6px -1px var(--color-shadow);
     overflow: hidden;
@@ -535,8 +617,8 @@ object {
 
   /* ===== Forms ===== */
   .input-field {
-    background-color: var(--color-input-bg);
-    color: var(--color-text);
+    background-color: var(--color-bg-input);
+    color: var(--color-text-primary);
     border: 1px solid var(--color-input-border);
     padding: 0.75rem 1rem;
     border-radius: 0.5rem;
@@ -550,12 +632,12 @@ object {
     box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.2);
   }
   .input-field::placeholder {
-    color: var(--color-text-muted);
+    color: var(--color-input-placeholder);
   }
 
   .dark .input-field {
-    background-color: var(--color-input-bg);
-    color: var(--color-text);
+    background-color: var(--color-bg-input);
+    color: var(--color-text-primary);
   }
   .dark .input-field:focus {
     box-shadow: 0 0 0 3px rgba(61, 184, 107, 0.2);
@@ -573,15 +655,23 @@ object {
   }
   .badge-primary {
     background-color: var(--color-primary);
-    color: white;
+    color: #ffffff;
   }
   .badge-secondary {
     background-color: var(--color-secondary);
-    color: white;
+    color: #ffffff;
   }
   .badge-accent {
     background-color: var(--color-accent);
     color: #1f2937;
+  }
+  .badge-success {
+    background-color: var(--color-success);
+    color: #ffffff;
+  }
+  .badge-error {
+    background-color: var(--color-error);
+    color: #ffffff;
   }
 }
 
@@ -593,7 +683,7 @@ object {
   /* ===== Theme Toggle Button ===== */
   .theme-toggle {
     background: var(--color-bg-secondary);
-    color: var(--color-text);
+    color: var(--color-text-primary);
     border: 1px solid var(--color-border);
     padding: 0.5rem;
     border-radius: 9999px;
@@ -608,35 +698,28 @@ object {
   }
   .theme-toggle:hover {
     background: var(--color-primary);
-    color: white;
+    color: #ffffff;
     transform: rotate(20deg);
     border-color: var(--color-primary);
   }
 
-  /* ===== Scrollbar Styling ===== */
-  ::-webkit-scrollbar {
+  /* ===== No Scrollbar X Utility ===== */
+  .no-scrollbar-x {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+
+  .no-scrollbar-x::-webkit-scrollbar {
     width: 8px;
     height: 0px;
   }
-  ::-webkit-scrollbar-track {
-    background-color: var(--color-bg-secondary);
-    border-radius: 4px;
-  }
-  ::-webkit-scrollbar-thumb {
-    background-color: var(--color-primary);
-    border-radius: 4px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: var(--color-primary-dark);
+
+  .no-scrollbar-x::-webkit-scrollbar-horizontal {
+    display: none !important;
+    height: 0 !important;
   }
 
-  /* ===== Smooth transitions for theme change ===== */
-  * {
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease,
-      box-shadow 0.3s ease, transform 0.3s ease;
-  }
-
-  /* ===== Glass effect ===== */
+  /* ===== Glass Effect ===== */
   .glass {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(12px);
@@ -654,35 +737,6 @@ object {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-  }
-
-  /* ===== Responsive Visibility ===== */
-  .mobile-only {
-    display: block;
-  }
-  .tablet-only {
-    display: none;
-  }
-  .desktop-only {
-    display: none;
-  }
-
-  @media (min-width: 640px) {
-    .mobile-only {
-      display: none;
-    }
-    .tablet-only {
-      display: block;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .tablet-only {
-      display: none;
-    }
-    .desktop-only {
-      display: block;
-    }
   }
 
   /* ===== Animations ===== */
@@ -773,36 +827,29 @@ object {
   .animate-float {
     animation: float 3s ease-in-out infinite;
   }
-
   .animate-pulse-slow {
     animation: pulse-slow 3s ease-in-out infinite;
   }
-
   .animate-slide-up {
     animation: slide-up 0.6s ease-out forwards;
   }
-
   .animate-slide-down {
     animation: slide-down 0.6s ease-out forwards;
   }
-
   .animate-slide-left {
     animation: slide-left 0.6s ease-out forwards;
   }
-
   .animate-slide-right {
     animation: slide-right 0.6s ease-out forwards;
   }
-
   .animate-zoom-in {
     animation: zoom-in 0.5s ease-out forwards;
   }
-
   .animate-spin-slow {
     animation: spin-slow 3s linear infinite;
   }
 
-  /* Animation delays */
+  /* Animation Delays */
   .delay-100 {
     animation-delay: 100ms;
   }
@@ -834,22 +881,6 @@ object {
     animation-delay: 1000ms;
   }
 
-  /* ===== No Scrollbar X Utility ===== */
-  .no-scrollbar-x {
-    overflow-x: hidden !important;
-    max-width: 100vw !important;
-  }
-
-  .no-scrollbar-x::-webkit-scrollbar {
-    width: 8px;
-    height: 0px;
-  }
-
-  .no-scrollbar-x::-webkit-scrollbar-horizontal {
-    display: none !important;
-    height: 0 !important;
-  }
-
   /* ===== Loading Spinner ===== */
   .spinner {
     width: 3rem;
@@ -872,7 +903,7 @@ object {
     border-width: 5px;
   }
 
-  /* ===== Skip to content link for accessibility ===== */
+  /* ===== Skip to Content Link ===== */
   .skip-link {
     position: absolute;
     width: 1px;
@@ -889,11 +920,11 @@ object {
     top: 1rem;
     left: 1rem;
     z-index: 9999;
-    background: white;
+    background: var(--color-bg);
     color: var(--color-primary);
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 15px -3px var(--color-shadow);
     width: auto;
     height: auto;
     clip: auto;
@@ -905,7 +936,7 @@ object {
     color: var(--color-primary);
   }
 
-  /* ===== Z-index layers ===== */
+  /* ===== Z-Index Layers ===== */
   .z-negative {
     z-index: -1;
   }
@@ -936,7 +967,7 @@ object {
 }
 
 /* ========================================
-   DARK MODE SPECIFIC STYLES
+   DARK MODE SPECIFIC OVERRIDES
    ======================================== */
 
 .dark .bg-white {
@@ -954,6 +985,7 @@ object {
 .dark .bg-gray-200 {
   background-color: #374151;
 }
+
 .dark .text-gray-600 {
   color: #9ca3af;
 }
@@ -963,12 +995,17 @@ object {
 .dark .text-gray-800 {
   color: #f3f4f6;
 }
+.dark .text-gray-900 {
+  color: #f9fafb;
+}
+
 .dark .border-gray-200 {
   border-color: #374151;
 }
 .dark .border-gray-300 {
   border-color: #4b5563;
 }
+
 .dark .shadow-sm {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
 }
@@ -981,6 +1018,7 @@ object {
 .dark .shadow-xl {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
 }
+
 .dark .card {
   background-color: #1f2937;
   border-color: #374151;
@@ -989,89 +1027,12 @@ object {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
 }
 
-/* ========================================
-   AOS OVERRIDES
-   ======================================== */
-
-[data-aos] {
-  pointer-events: none;
+.dark .input-field {
+  background-color: #1f2937;
+  color: #f3f4f6;
 }
-
-[data-aos].aos-animate {
-  pointer-events: auto;
-}
-
-/* ========================================
-   RESPONSIVE IMAGES
-   ======================================== */
-
-.img-cover {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.img-contain {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-/* ========================================
-   PRINT STYLES
-   ======================================== */
-
-@media print {
-  .no-print {
-    display: none !important;
-  }
-  body {
-    background: white !important;
-    color: black !important;
-  }
-  .dark body {
-    background: white !important;
-    color: black !important;
-  }
-  .card {
-    box-shadow: none !important;
-    border: 1px solid #ddd !important;
-  }
-}
-
-/* ========================================
-   RESPONSIVE BREAKPOINTS SUMMARY
-   ======================================== */
-
-/*
-  Breakpoints:
-  - Mobile: 0 - 639px
-  - Tablet: 640px - 1023px
-  - Laptop: 1024px - 1279px
-  - Desktop: 1280px - 1535px
-  - Large Desktop: 1536px+
-*/
-
-/* Mobile first - all styles are mobile-first by default */
-
-/* Tablet and up */
-@media (min-width: 640px) {
-  /* Tablet specific styles */
-}
-
-/* Laptop and up */
-@media (min-width: 1024px) {
-  /* Laptop specific styles */
-}
-
-/* Desktop and up */
-@media (min-width: 1280px) {
-  /* Desktop specific styles */
-}
-
-/* Large Desktop */
-@media (min-width: 1536px) {
-  /* Large Desktop specific styles */
+.dark .input-field:focus {
+  box-shadow: 0 0 0 3px rgba(61, 184, 107, 0.2);
 }
 
 /* ========================================
@@ -1135,4 +1096,89 @@ object {
   .home-page .grid-auto-fill {
     grid-template-columns: repeat(2, 1fr) !important;
   }
+}
+
+/* ========================================
+   RESPONSIVE IMAGES
+   ======================================== */
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-contain {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ========================================
+   AOS OVERRIDES
+   ======================================== */
+
+[data-aos] {
+  pointer-events: none;
+}
+
+[data-aos].aos-animate {
+  pointer-events: auto;
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .dark body {
+    background: white !important;
+    color: black !important;
+  }
+  .card {
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+  }
+}
+
+/* ========================================
+   RESPONSIVE BREAKPOINTS SUMMARY
+   ======================================== */
+
+/*
+  Breakpoints:
+  - Mobile: 0 - 639px
+  - Tablet: 640px - 1023px
+  - Laptop: 1024px - 1279px
+  - Desktop: 1280px - 1535px
+  - Large Desktop: 1536px+
+*/
+
+/* Mobile first - all styles are mobile-first by default */
+
+/* Tablet and up */
+@media (min-width: 640px) {
+  /* Tablet specific styles */
+}
+
+/* Laptop and up */
+@media (min-width: 1024px) {
+  /* Laptop specific styles */
+}
+
+/* Desktop and up */
+@media (min-width: 1280px) {
+  /* Desktop specific styles */
+}
+
+/* Large Desktop */
+@media (min-width: 1536px) {
+  /* Large Desktop specific styles */
 }

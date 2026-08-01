@@ -4,7 +4,7 @@ import { FaHandsHelping, FaHeart, FaStar, FaUsers } from 'react-icons/fa';
 
 const VolunteerSection = () => {
   return (
-    <section className="py-16 bg-primary text-white">
+    <section className="py-16 bg-primary text-white pt-24">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-heading font-bold" data-aos="fade-up">Become a Volunteer</h2>
         <p className="mt-3 text-gray-200 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">Join our team of passionate volunteers and make a tangible difference in communities.</p>

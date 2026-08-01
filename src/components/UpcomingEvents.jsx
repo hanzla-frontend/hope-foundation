@@ -4,7 +4,7 @@ import { FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
 
 const UpcomingEvents = () => {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white pt-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12" data-aos="fade-up">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary">Upcoming Events</h2>

@@ -6,7 +6,7 @@ const Gallery = () => {
   const [selected, setSelected] = useState(null);
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white pt-24">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-heading font-bold text-center text-primary mb-12" data-aos="fade-up">Photo Gallery</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

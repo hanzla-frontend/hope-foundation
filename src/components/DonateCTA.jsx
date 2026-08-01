@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const DonateCTA = () => {
   return (
-    <section className="py-16 bg-secondary text-white">
+    <section className="py-16 bg-secondary text-white pt-24">
       <div className="container mx-auto px-4 text-center" data-aos="fade-up">
         <h2 className="text-3xl md:text-4xl font-heading font-bold">Make a Difference Today</h2>
         <p className="mt-3 text-gray-200 max-w-2xl mx-auto">Your donation can change lives. Every contribution, big or small, helps us reach more communities.</p>
